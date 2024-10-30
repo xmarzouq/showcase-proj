@@ -1,0 +1,10 @@
+[project]
+name = "showcase-proj"
+version = "0.1.0"
+description = "Student - Teacher platform project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.115.4",
+    "streamlit>=1.39.0",
+]
