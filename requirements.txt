@@ -1,3 +1,6 @@
 uvicorn
 fastapi[standard]
 streamlit
+pydantic-settings
+sqlalchemy
+faker
