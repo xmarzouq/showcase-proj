@@ -23,7 +23,7 @@ COPY backend /app/backend
 
 EXPOSE 8002
 
-CMD ["fastapi", "dev", "backend/app/main.py", "--port=8002", "--host=0.0.0.0"]
+CMD ["fastapi", "dev", "backend/app/main.py", "--port=8002", "--host=0.0.0.0", "--reload"]
 
 FROM base AS frontend
 
