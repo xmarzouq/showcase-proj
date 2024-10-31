@@ -6,5 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi[standard]>=0.115.4",
+    "streamlit-card>=1.0.2",
+    "streamlit-extras>=0.5.0",
     "streamlit>=1.39.0",
 ]

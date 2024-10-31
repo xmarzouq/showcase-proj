@@ -1,7 +1,8 @@
+from functools import lru_cache
 from sqlalchemy.orm import Session
 from backend.app.db.models import Teacher, Student
 
-
+@lru_cache()
 def get_all_teachers(db: Session):
     return db.query(Teacher).all()
 

@@ -15,13 +15,13 @@ def seed_data():
         db.execute(text("DELETE FROM teachers"))
         db.commit()
         teachers = []
-        for _ in range(5):
+        for _ in range(20):
             teacher = add_teacher(
                 db, {"name": fake.name(), "subject": random_subject()}
             )
             teachers.append(teacher)
 
-        for _ in range(5):
+        for _ in range(20):
             student = add_student(
                 db,
                 {"name": fake.name(), "email": fake.email()},
