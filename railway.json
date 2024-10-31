@@ -1,0 +1,21 @@
+{
+    "services": [
+      {
+        "name": "backend",
+        "startCommand": "uvicorn backend.app.main:app --host 0.0.0.0 --port 8002",
+        "buildCommand": "docker build --target=backend -t backend .",
+        "envVars": {
+          "DATABASE_URL": "sqlite:///backend/app/db/database.db"
+        },
+        "port": 8002,
+        "type": "container"
+      },
+      {
+        "name": "frontend",
+        "startCommand": "streamlit run frontend/🚀_Home.py --server.port=8003 --server.address=0.0.0.0",
+        "buildCommand": "docker build --target=frontend -t frontend .",
+        "port": 8003,
+        "type": "container"
+      }
+    ]
+  }  

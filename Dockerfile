@@ -17,13 +17,13 @@ RUN pip3 install --no-cache-dir --upgrade -r requirements.txt
 
 FROM base AS backend
 
-ENV DATABASE_URL="file:./backend/app/db/database.db"
+ENV DATABASE_URL="sqlite:///backend/app/db/database.db"
 
 COPY backend /app/backend
 
 EXPOSE 8002
 
-CMD ["fastapi", "run", "backend/app/main.py", "--port=8002", "--host=0.0.0.0", "--reload"]
+CMD ["uvicorn", "backend.app.main:app", "--port", "8002", "--host", "0.0.0.0", "--reload"]
 
 FROM base AS frontend
 
